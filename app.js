@@ -1,5 +1,7 @@
-require('./utils')
+const add = require('./utils')
+const notes = require('./notes')
 
-const name =  "Rei"
+const sum = add(4,5)
 
-console.log(name)
+console.log(sum)
+console.log(notes())
