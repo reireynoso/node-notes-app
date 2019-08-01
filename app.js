@@ -1,7 +1,6 @@
-const add = require('./utils')
+const validator = require('validator') //requiring npm 
 const notes = require('./notes')
 
-const sum = add(4,5)
-
-console.log(sum)
 console.log(notes())
+
+console.log(validator.isEmail('example.com'))
