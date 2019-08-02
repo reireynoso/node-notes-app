@@ -30,8 +30,9 @@ yargs.command({
     },
     handler: function(argv) {
         // console.log('Adding a new node', argv)
-        console.log('Title: ' + argv.title)
-        console.log('Body: ' + argv.body)
+        // console.log('Title: ' + argv.title)
+        // console.log('Body: ' + argv.body)
+        notes.addNote(argv.title, argv.body)
     }
 })
 
@@ -40,8 +41,17 @@ yargs.command({
 yargs.command({
     command: "remove",
     describe: "Remove a new note",
-    handler: function() {
-        console.log('Removing a node')
+    builder: {
+        title: {
+            describe: 'Note title',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler: function(argv) {
+        // console.log('Removing a node')
+        // console.log('Removing ' + argv.title)
+        notes.removeNotes(argv.title)
     }
 })
 
