@@ -61,7 +61,7 @@ const readNote = (title) => {
         console.log(match)
     }
     else{
-        console.log(chalk.red.bold.inverse('No match found'))
+        console.log(chalk.red.bold.inverse('No match!'))
     }
     
 }
